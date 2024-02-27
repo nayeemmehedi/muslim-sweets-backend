@@ -27,10 +27,15 @@ app.use(
 app.use(cookieParser());
 
 
-
-  app.get("/api/v1",userVerify,(req, res) => {
+app.get("/",(req, res) => {
   res.send("Welcome");
 });
+
+
+  app.get("/api",userVerify,(req, res) => {
+  res.send("Welcome");
+});
+
 
 
 app.use("/api/v1", signupRoutes)
