@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
-const url = process.env.db_url;
 
 async function dbConnection() {
+ const url = `mongodb+srv://${process.env.mongodb_name}:${process.env.mongodb_pw}@cluster0.teacx.mongodb.net/${process.env.mongodb}`
   try {
     await mongoose.connect(url);
   } catch (error) {
