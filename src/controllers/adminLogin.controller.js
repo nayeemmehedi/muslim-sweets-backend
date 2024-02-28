@@ -23,4 +23,15 @@ const adminLoginController = asyncHandler(async (req, res) => {
   }
 });
 
-export { adminLoginController };
+const adminMain = asyncHandler(async (req, res) => {
+ 
+  const admin = new adminLogin(req.body)
+  admin.save()
+
+
+  
+});
+
+
+
+export { adminLoginController,adminMain };
