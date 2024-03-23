@@ -83,7 +83,7 @@ async function paymentSuccess(req, res) {
 
     console.log("data: ", data)
 
-    res.redirect("http://localhost:3000/payment-success")
+    res.redirect("https://muslim-sweets-frontend-23d.vercel.app/payment-success")
 
   
   } catch (error) {
@@ -97,7 +97,7 @@ async function paymentFail(req, res) {
     if (!payment) {
       return res.status(404).json({ message: "payment not found" });
     }
-    res.redirect("http://localhost:3000/payment-failed");
+    res.redirect("https://muslim-sweets-frontend-23d.vercel.app/payment-failed");
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

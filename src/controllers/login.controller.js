@@ -43,7 +43,7 @@ const loginController = asyncHandler(async (req, res) => {
     .send(
       new ApiResponse(
         200,
-        { accessTokenValue, refreshTokenValue },
+        { accessTokenValue, refreshTokenValue ,userName: user.name ,userEmail: user.email},
         "Login Successfully Done"
       )
     );
