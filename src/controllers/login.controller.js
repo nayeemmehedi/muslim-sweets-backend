@@ -12,6 +12,8 @@ const loginController = asyncHandler(async (req, res) => {
   }
   const user = await signup.findOne({ email: email });
 
+  console.log("user found",user)
+
   if (!user) {
     throw new ApiError("Email and Paaword Not Matching..");
   }
@@ -43,7 +45,7 @@ const loginController = asyncHandler(async (req, res) => {
     .send(
       new ApiResponse(
         200,
-        { accessTokenValue, refreshTokenValue ,userName: user.name ,userEmail: user.email},
+        { accessTokenValue, refreshTokenValue ,userName: user.username ,userEmail: email ,img : user.imgUrl},
         "Login Successfully Done"
       )
     );
