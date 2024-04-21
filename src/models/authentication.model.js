@@ -89,7 +89,7 @@ signupValue.methods.accessToken = (data) => {
       email: data.email,
     },
     process.env.accees_token_secrat,
-    { expiresIn: "30s" }
+    { expiresIn: "30d" }
   );
 };
 
