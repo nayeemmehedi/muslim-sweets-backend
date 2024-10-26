@@ -1,0 +1,32 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "src/index.js"
+      }
+    ],
+    "env": {
+      "MONGODB_URI": "mongodb://127.0.0.1:27017/sweets", 
+      "PORT": "4500",
+      "CORS_ORIGIN": "*",
+      "ACCESS_TOKEN_SECRET": "ee9315791116e56d3b52fc4b886e006f4a3b778c862022975de5bc3f53afb889",
+      "REFRESH_TOKEN_SECRET": "3a7a1eb5af8cc61db1d1327b8c63b9406c08fb63b601c0544a210bb0348eddee",
+      "CLOUDINARY_NAME": "dgurwyvxj",
+      "CLOUDINARY_API_KEY": "487968118885636",
+      "CLOUDINARY_API_SECRET": "HJaDMLC-_OETFi6cVOHeackcZHI",
+      "LOCALHOST": "https://muslim-sweets-backend.onrender.com",
+      "MONGODB_NAME": "nayeemmehedi",
+      "MONGODB_PASSWORD": "nayeemmehedi41",
+      "MONGODB_DATABASE": "muslim-sweets",
+      "PAYMENT_TOKEN_SECRET": "nayee63d55277af705",
+      "PAYMENT_TOKEN_SECRET_PASSWORD": "nayee63d55277af705@ssl"
+    }
+  }
+  
